@@ -1,33 +1,18 @@
 package ru.basharin.model;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Route {
-    private Date departureTime;
-    private Date arrivalTime;
     private String departurePlace;
     private String arrivalPlace;
+    private String departureTime;
+    private String arrivalTime;
 
-    public Route(Date departureTime, Date arrivalTime, String departurePlace, String arrivalPlace) {
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
+    public Route(String departurePlace, String arrivalPlace, String departureTime, String arrivalTime) {
         this.departurePlace = departurePlace;
         this.arrivalPlace = arrivalPlace;
-    }
-
-    public Date getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(Date departureTime) {
         this.departureTime = departureTime;
-    }
-
-    public Date getArrivalTime() {
-        return arrivalTime;
-    }
-
-    public void setArrivalTime(Date arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
@@ -47,13 +32,27 @@ public class Route {
         this.arrivalPlace = arrivalPlace;
     }
 
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public String getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
     @Override
     public String toString() {
-        return "Route{" +
-                "departureTime=" + departureTime +
-                ", arrivalTime=" + arrivalTime +
-                ", departurePlace='" + departurePlace + '\'' +
-                ", arrivalPlace='" + arrivalPlace + '\'' +
-                '}';
+        return departurePlace +
+                " " + arrivalPlace +
+                " " + departureTime +
+                " " + arrivalTime;
     }
 }

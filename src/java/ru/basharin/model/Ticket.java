@@ -1,17 +1,21 @@
 package ru.basharin.model;
 
+import java.math.BigDecimal;
+
 public class Ticket {
     private Route route;
     private Wagon wagon;
-    private User user;
+    private int wagonNumber;
+    private String userName;
     private int place;
-    private int price;
+    private BigDecimal price;
     private boolean sell;
 
-    public Ticket(Route route, Wagon wagon, User user, int place, int price, boolean sell) {
+    public Ticket(Route route, Wagon wagon, int wagonNumber, String userName, int place, BigDecimal price, boolean sell) {
         this.route = route;
         this.wagon = wagon;
-        this.user = user;
+        this.wagonNumber = wagonNumber;
+        this.userName = userName;
         this.place = place;
         this.price = price;
         this.sell = sell;
@@ -33,12 +37,20 @@ public class Ticket {
         this.wagon = wagon;
     }
 
-    public User getUser() {
-        return user;
+    public int getWagonNumber() {
+        return wagonNumber;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setWagonNumber(int wagonNumber) {
+        this.wagonNumber = wagonNumber;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getPlace() {
@@ -49,11 +61,11 @@ public class Ticket {
         this.place = place;
     }
 
-    public int getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -67,13 +79,12 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "route=" + route +
-                ", wagon=" + wagon +
-                ", user=" + user +
-                ", place=" + place +
-                ", price=" + price +
-                ", sell=" + sell +
-                '}';
+        return route + " "
+                + wagonNumber + " "
+                + place + " "
+                + wagon + " "
+                + userName + " "
+                + price + " "
+                + sell;
     }
 }
