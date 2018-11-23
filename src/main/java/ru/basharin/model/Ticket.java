@@ -21,6 +21,9 @@ public class Ticket {
         this.sell = sell;
     }
 
+    public Ticket() {
+    }
+
     public Route getRoute() {
         return route;
     }

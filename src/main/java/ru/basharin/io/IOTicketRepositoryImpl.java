@@ -6,8 +6,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IOTicketController implements TicketRepository {
-    private final String FILE_NAME = "src\\java\\ru\\basharin\\resources\\ticket.txt";
+public class IOTicketRepositoryImpl implements TicketRepository {
+    private final String FILE_NAME = "src\\main\\resources\\ticket.csv";
     private final File file = new File(FILE_NAME);
 
     @Override

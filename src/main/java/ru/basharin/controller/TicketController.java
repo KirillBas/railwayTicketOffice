@@ -1,10 +1,10 @@
 package ru.basharin.controller;
 
-import ru.basharin.io.IOTicketController;
+import ru.basharin.io.IOTicketRepositoryImpl;
 import ru.basharin.model.Ticket;
 
 public class TicketController {
-    private IOTicketController ioTicketController = new IOTicketController();
+    private IOTicketRepositoryImpl ioTicketController = new IOTicketRepositoryImpl();
 
     public void saveTicket(Ticket ticket) {
         if (ticket == null) throw new IllegalArgumentException();

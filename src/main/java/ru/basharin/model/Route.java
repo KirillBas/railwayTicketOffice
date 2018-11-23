@@ -16,6 +16,9 @@ public class Route {
         this.arrivalTime = arrivalTime;
     }
 
+    public Route() {
+    }
+
     public String getDeparturePlace() {
         return departurePlace;
     }
